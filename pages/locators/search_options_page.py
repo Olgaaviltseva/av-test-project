@@ -1,0 +1,23 @@
+from selenium.webdriver.common.by import By
+
+all_options_button = (By.XPATH, '//button[@class="button button--link"][1]')
+automation_transmission_button = (By.XPATH, '//div[@id="p-13-transmission_type"]//label[1]//span')
+show_button = (By.CSS_SELECTOR, '.button.button--secondary.button--block')
+autom_transm_show_button = (By.XPATH, '//a[@href="https://cars.av.by/filter?transmission_type=1"]')
+manual_transmission_button = (By.XPATH, '//div[@id="p-13-transmission_type"]//label[2]//span')
+manual_transm_show_button = (By.XPATH, '//a[@href="https://cars.av.by/filter?transmission_type=2"]')
+body_button = (By.ID, 'p-14-body_type')
+cabriolet_checkbox = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[3]')
+cabriolet_show_button = (By.XPATH, '//a[@href="https://cars.av.by/filter?body_type[0]=7"]')
+engine_type_button = (By.ID, 'p-15-engine_type')
+diesel_button = (By.XPATH, '//div[@id="p-15-engine_type"]//li[5]')
+diesel_show_button = (By.XPATH, '//a[@href="https://cars.av.by/filter?engine_type[0]=5"]')
+drive_unit_button = (By.ID, 'p-16-drive_type')
+front_wheel_drive_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[1]')
+front_wheel_drive_show_button = (By.XPATH, '//a[@href="https://cars.av.by/filter?drive_type[0]=1"]')
+
+automatic_transmission_text = (By.XPATH, '//div[@class="button-group__list"]//label[1]//span')
+manual_transmission_text = (By.XPATH, '//div[@class="button-group__list"]//label[2]//span')
+cabriolet_text = (By.XPATH, '//button[@class="dropdown__control dropdown__control--active dropdown-button"]//span')
+diesel_text = (By.XPATH, '//button[@class="dropdown__control dropdown__control--active dropdown-button"]//span')
+front_wheel_drive_text = (By.XPATH, '//button[@class="dropdown__control dropdown__control--active dropdown-button"]//span')

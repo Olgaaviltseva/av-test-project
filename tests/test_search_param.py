@@ -1,6 +1,5 @@
 from pages.search_form_page import SearchPage
 import allure
-from time import sleep
 
 
 @allure.feature('Search form page')
@@ -188,7 +187,6 @@ def test_search_volume_from(driver):
         search_page.click_show_button()
     with allure.step('Check that volume from 1,2 l is selected'):
         assert search_page.get_text_l_1_2_volume_from() == '1,2 л.'
-        sleep(3)
 
 
 @allure.feature('Search form page')
@@ -206,4 +204,3 @@ def test_search_volume_before(driver):
         search_page.click_show_button()
     with allure.step('Check that volume before 1,3 l is selected'):
         assert search_page.get_text_l_1_3_volume_before() == '1,3 л.'
-        sleep(3)
