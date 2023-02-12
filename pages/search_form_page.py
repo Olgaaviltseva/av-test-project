@@ -66,6 +66,18 @@ class SearchPage(BasePage):
     def click_byn_button(self):
         self.find(loc.byn_button).click()
 
+    def click_volume_from_button(self):
+        self.find(loc.volume_from_button).click()
+
+    def click_volume_before_button(self):
+        self.find(loc.volume_before_button).click()
+
+    def click_l_1_2_button(self):
+        self.find(loc.l_1_2_vol_from_button).click()
+
+    def click_l_1_3_button(self):
+        self.find(loc.l_1_3_vol_before_button).click()
+
     def get_text_bentley_brand(self):
         return self.find(loc.bentley_brand).get_attribute('innerText')
 
@@ -89,6 +101,12 @@ class SearchPage(BasePage):
 
     def get_text_byn_currency(self):
         return self.find(loc.byn_currency).get_attribute('innerText')
+
+    def get_text_l_1_2_volume_from(self):
+        return self.find(loc.l_1_2_volume_from).get_attribute('innerText')
+
+    def get_text_l_1_3_volume_before(self):
+        return self.find(loc.l_1_3_volume_before).get_attribute('innerText')
 
     def wait_listing_title(self):
         WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(loc.listing__title))
@@ -128,6 +146,12 @@ class SearchPage(BasePage):
 
     def wait_show_button_5000_byn(self):
         WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(loc.show_button_5000_byn))
+
+    def wait_show_button_l_1_2_volume_from(self):
+        WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(loc.show_button_l_1_2_volume_from))
+
+    def wait_show_button_l_1_3_volume_before(self):
+        WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(loc.show_button_l_1_3_volume_before))
 
     def get_text_list_result(self):
         list_result = self.driver.find_element(By.CLASS_NAME, 'listing__items')

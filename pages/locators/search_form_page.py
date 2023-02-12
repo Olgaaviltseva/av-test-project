@@ -15,6 +15,10 @@ year_from_2022_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--op
 year_before_2022_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[3]')
 currency_button = (By.ID, 'p-10-price_currency')
 byn_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[2]')
+volume_from_button = (By.XPATH, '//div[@id="p-12-engine_capacity"]//div//div[1]')
+l_1_2_vol_from_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[4]')
+volume_before_button = (By.XPATH, '//div[@id="p-12-engine_capacity"]//div//div[2]')
+l_1_3_vol_before_button = (By.XPATH, '//ul[@class="dropdown-list dropdown-list--opened"]//li[5]')
 
 exclude_checkbox = (By.XPATH, '//label[@class="radiobutton"][2]')
 show_button = (By.CSS_SELECTOR, '.button.button--secondary.button--block')
@@ -29,6 +33,8 @@ a3_model = (By.XPATH, '//button[@name="p-6-0-3-model"]//span[2]')
 a3_list = (By.XPATH, '//button[@data-item-label="A3"]')
 list_8l = (By.XPATH, '//div[@class="dropdown__cards"]//div[@class="dropdown__card"][1]')
 byn_currency = (By.XPATH, '//button[@class="dropdown__control dropdown__control--active dropdown-floatlabel"]//span[2]')
+l_1_2_volume_from = (By.XPATH, '//div[@id="p-12-engine_capacity"]//div[1]//div[1]//button//span[2]')
+l_1_3_volume_before = (By.XPATH, '//div[@id="p-12-engine_capacity"]//div[2]//button//span[2]')
 
 show_button_bentley = (By.XPATH, '//a[@href="https://cars.av.by/bentley"]')
 show_button_audi = (By.XPATH, '//a[@href="https://cars.av.by/audi"]')
@@ -43,4 +49,5 @@ show_button_from_price_500 = (By.XPATH, '//a[@href="https://cars.av.by/filter?pr
 show_button_before_price_5000 = (By.XPATH, '//a[@href="https://cars.av.by/filter?price_usd[max]=5000"]')
 show_button_5000_byn = (By.XPATH, '//a[@href="https://cars.av.by/filter?price_byn[max]=5000&price_currency=1"]')
 show_button_byn = (By.XPATH, '//a[@href="https://cars.av.by/filter?price_currency=1"]')
-
+show_button_l_1_2_volume_from = (By.XPATH, '//a[@href="https://cars.av.by/filter?engine_capacity[min]=1200"]')
+show_button_l_1_3_volume_before = (By.XPATH, '//a[@href="https://cars.av.by/filter?engine_capacity[max]=1300"]')

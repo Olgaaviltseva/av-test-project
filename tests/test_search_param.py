@@ -173,5 +173,37 @@ def test_search_currency_byn(driver):
         assert search_page.get_text_byn_currency() == 'BYN'
 
 
+@allure.feature('Search form page')
+@allure.story('Search by volume from')
+def test_search_volume_from(driver):
+    with allure.step('Open Search form page'):
+        search_page = SearchPage(driver)
+        search_page.open()
+        search_page.scroll_page_450()
+    with allure.step('Select value from'):
+        search_page.click_volume_from_button()
+        search_page.click_l_1_2_button()
+    with allure.step('Click show button'):
+        search_page.wait_show_button_l_1_2_volume_from()
+        search_page.click_show_button()
+    with allure.step('Check that volume from 1,2 l is selected'):
+        assert search_page.get_text_l_1_2_volume_from() == '1,2 л.'
+        sleep(3)
 
 
+@allure.feature('Search form page')
+@allure.story('Search by volume before')
+def test_search_volume_before(driver):
+    with allure.step('Open Search form page'):
+        search_page = SearchPage(driver)
+        search_page.open()
+        search_page.scroll_page_450()
+    with allure.step('Select value before'):
+        search_page.click_volume_before_button()
+        search_page.click_l_1_3_button()
+    with allure.step('Click show button'):
+        search_page.wait_show_button_l_1_3_volume_before()
+        search_page.click_show_button()
+    with allure.step('Check that volume before 1,3 l is selected'):
+        assert search_page.get_text_l_1_3_volume_before() == '1,3 л.'
+        sleep(3)
